@@ -20,11 +20,23 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace API
+namespace PostgreSQL
 {
-    internal class PgRestoreInfo
+    public enum DataMode
     {
+        All,
+        /// <summary>
+        /// Dump only the data, not the schema (data definitions). Table data, large objects, and sequence values are dumped.
+        /// This option is similar to, but for historical reasons not identical to, specifying --section=data.
+        /// </summary>
+        DataOnly,
+        /// <summary>
+        /// Dump only the object definitions (schema), not data.
+        /// This option is the inverse of --data-only. It is similar to, but for historical reasons not identical to, specifying --section=pre-data --section=post-data.
+        /// (Do not confuse this with the --schema option, which uses the word "schema" in a different meaning.)
+        /// To exclude table data for only a subset of tables in the database, see --exclude-table-data.
+        /// </summary>
+        SchemaOnly
     }
 }

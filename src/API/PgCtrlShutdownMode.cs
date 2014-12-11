@@ -24,7 +24,10 @@ using System.Threading.Tasks;
 
 namespace API
 {
-    internal class PgRestoreInfo
+    public enum PgCtrlShutdownMode
     {
+        Smart,
+        Fast,
+        Immediate
     }
 }

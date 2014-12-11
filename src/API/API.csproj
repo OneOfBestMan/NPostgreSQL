@@ -39,9 +39,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BackupInfo.cs" />
     <Compile Include="DatabaseFacade.cs" />
+    <Compile Include="DataMode.cs" />
+    <Compile Include="FileFormat.cs" />
     <Compile Include="PgCtrl.cs" />
     <Compile Include="PgCtrlInfo.cs" />
+    <Compile Include="PgCtrlShutdownMode.cs" />
     <Compile Include="PgDump.cs" />
     <Compile Include="PgDumpInfo.cs" />
     <Compile Include="PgIsReady.cs" />
@@ -49,7 +53,10 @@
     <Compile Include="PgRestore.cs" />
     <Compile Include="PgRestoreInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RestoreInfo.cs" />
     <Compile Include="ServerFacade.cs" />
+    <Compile Include="ServerIsReady.cs" />
+    <Compile Include="UtilityBase.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

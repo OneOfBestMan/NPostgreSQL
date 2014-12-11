@@ -24,7 +24,11 @@ using System.Threading.Tasks;
 
 namespace API
 {
-    internal class PgRestoreInfo
+    public enum ServerIsReady
     {
+        Ready = 0,      // 0 to the shell if the server is accepting connections normally
+        Rejecting = 1,  // 1 if the server is rejecting connections (for example during startup)
+        NoResponse = 2, // 2 if there was no response to the connection attempt
+        NoAttempt = 3   // 3 if no attempt was made (for example due to invalid parameters)
     }
 }
