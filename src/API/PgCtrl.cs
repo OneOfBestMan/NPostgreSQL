@@ -47,9 +47,9 @@ namespace API
         public void Initialize(string dataDirectory, InitDbOptions options = null)
         {
             StringBuilder arguments = new StringBuilder();
+
             arguments.Append(" init");
             arguments.Append(String.Format(" -D {0}", dataDirectory));
-
             if (options != null)
                 arguments.Append(String.Format(" -o '{0}'", options.Arguments));
 
@@ -60,6 +60,8 @@ namespace API
         public void Start()
         {
             StringBuilder arguments = new StringBuilder();
+            arguments.Append(" start");
+
 
             Execute(arguments.ToString());
         }
