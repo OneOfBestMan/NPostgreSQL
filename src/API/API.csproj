@@ -43,9 +43,11 @@
     <Compile Include="DatabaseFacade.cs" />
     <Compile Include="DataMode.cs" />
     <Compile Include="FileFormat.cs" />
+    <Compile Include="InitDbOptions.cs" />
     <Compile Include="PgCtrl.cs" />
     <Compile Include="PgCtrlInfo.cs" />
     <Compile Include="PgCtrlShutdownMode.cs" />
+    <Compile Include="PgCtrlStartType.cs" />
     <Compile Include="PgDump.cs" />
     <Compile Include="PgDumpInfo.cs" />
     <Compile Include="PgIsReady.cs" />

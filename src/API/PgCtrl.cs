@@ -26,24 +26,99 @@ namespace API
 {
     internal class PgCtrl : UtilityBase
     {
+        #region Constructors
+        public PgCtrl(string ExecutablePath)
+        {
+            this.ExecutablePath = ExecutablePath;
+            this.ExecutableFilename = "pg_ctrl.exe";
+        }
+        #endregion
+
         #region Public
-        // Initialize
+        /// <summary>
+        /// Creates a new PostgreSQL database cluster.
+        /// </summary>
+        /// <param name="dataDirectory">Specifies the file system location of the database configuration files.</param>
+        /// <param name="options">Specifies options to be passed directly to the initdb command.</param>
+        /// <remarks>
+        /// A database cluster is a collection of databases that are managed by a single server instance.
+        /// This mode invokes the initdb command. 
+        /// </remarks>
+        public void Initialize(string dataDirectory, InitDbOptions options = null)
+        {
+            StringBuilder arguments = new StringBuilder();
+            arguments.Append(" init");
+            arguments.Append(String.Format(" -D {0}", dataDirectory));
+
+            if (options != null)
+                arguments.Append(String.Format(" -o '{0}'", options.Arguments));
+
+            Execute(arguments.ToString());
+        }
 
         // Start
+        public void Start()
+        {
+            StringBuilder arguments = new StringBuilder();
+
+            Execute(arguments.ToString());
+        }
 
         // Stop
+        public void Stop()
+        {
+            StringBuilder arguments = new StringBuilder();
+
+            Execute(arguments.ToString());
+        }
 
         // Restart
+        public void Restart()
+        {
+            StringBuilder arguments = new StringBuilder();
+
+            Execute(arguments.ToString());
+        }
 
         // Reload
+        public void Reload()
+        {
+            StringBuilder arguments = new StringBuilder();
+
+            Execute(arguments.ToString());
+        }
 
         // Status
+        public void Status()
+        {
+            StringBuilder arguments = new StringBuilder();
+
+            Execute(arguments.ToString());
+        }
 
         // Kill
+        public void Kill()
+        {
+            StringBuilder arguments = new StringBuilder();
+
+            Execute(arguments.ToString());
+        }
 
         // Register
+        public void Register()
+        {
+            StringBuilder arguments = new StringBuilder();
+
+            Execute(arguments.ToString());
+        }
 
         // UnRegister
+        public void UnRegister()
+        {
+            StringBuilder arguments = new StringBuilder();
+
+            Execute(arguments.ToString());
+        }
 
         #endregion
 

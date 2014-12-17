@@ -26,5 +26,16 @@ namespace API
 {
     internal class PgIsReady : UtilityBase
     {
+        #region Constructors
+        public PgIsReady(string ExecutablePath)
+        {
+            this.ExecutablePath = ExecutablePath;
+            this.ExecutableFilename = "pg_isready.exe";
+        }
+        #endregion
+
+        #region Public
+
+        #endregion
     }
 }

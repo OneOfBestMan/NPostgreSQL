@@ -26,5 +26,12 @@ namespace API
 {
     internal class PgRestore : UtilityBase
     {
+        #region Constructors
+        public PgRestore(string ExecutablePath)
+        {
+            this.ExecutablePath = ExecutablePath;
+            this.ExecutableFilename = "pg_restore.exe";
+        }
+        #endregion
     }
 }

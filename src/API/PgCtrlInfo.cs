@@ -26,6 +26,13 @@ namespace API
 {
     internal class PgCtrlInfo
     {
-
+        /// <summary>
+        /// Specifies the file system location of the database files.
+        /// If this is omitted, the environment variable PGDATA is used.
+        /// </summary>
+        /// <remarks>
+        /// -D datadir
+        /// </remarks>
+        public string DataDir { get; set; }
     }
 }

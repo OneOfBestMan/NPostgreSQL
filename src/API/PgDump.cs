@@ -26,5 +26,12 @@ namespace API
 {
     internal class PgDump : UtilityBase
     {
+        #region Constructors
+        public PgDump(string ExecutablePath)
+        {
+            this.ExecutablePath = ExecutablePath;
+            this.ExecutableFilename = "pg_dump.exe";
+        }
+        #endregion
     }
 }
