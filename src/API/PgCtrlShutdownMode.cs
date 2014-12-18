@@ -24,6 +24,9 @@ using System.Threading.Tasks;
 
 namespace API
 {
+    /// <summary>
+    /// Specifies the shutdown mode. mode can be smart, fast, or immediate, or the first letter of one of these three. If this is omitted, smart is used.
+    /// </summary>
     public enum PgCtrlShutdownMode
     {
         Smart,

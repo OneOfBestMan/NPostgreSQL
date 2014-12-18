@@ -27,7 +27,7 @@ namespace PostgreSQL
     /// PostgreSQL pg_dump Utility
     /// http://www.postgresql.org/docs/9.3/static/app-pgdump.html
     /// </summary>
-    public class BackupInfo : Utilty
+    public class BackupInfo 
     {
         #region Members
         private bool oids = false;
@@ -47,7 +47,7 @@ namespace PostgreSQL
         /// </summary>
         public BackupInfo() : base() 
         {
-            UtilityFile = "pg_dump.exe";
+            //UtilityFile = "pg_dump.exe";
         }
 
         /// <summary>
@@ -58,9 +58,9 @@ namespace PostgreSQL
         /// <param name="database">Specifies the name of the database to connect to.</param>
         /// <param name="username">User name to connect as.</param>
         /// <param name="password">User password.</param>
-        public BackupInfo(string host, int port, string database, string username, string password) : base(host, port, database, username, password) 
+        public BackupInfo(string host, int port, string database, string username, string password) 
         {
-            UtilityFile = "pg_dump.exe";
+            //UtilityFile = "pg_dump.exe";
         }
         #endregion
 
@@ -182,7 +182,7 @@ namespace PostgreSQL
         /// pg_dump command-line arguments
         /// </summary>
         /// <returns></returns>
-        public override string Arguments()
+        public string Arguments()
         {
             StringBuilder arguments = new StringBuilder();
             

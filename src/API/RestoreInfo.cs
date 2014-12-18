@@ -27,7 +27,7 @@ namespace PostgreSQL
     /// PostgreSQL pg_restore utility
     /// http://www.postgresql.org/docs/9.3/static/app-pgrestore.html
     /// </summary>
-    public class RestoreInfo : Utilty
+    public class RestoreInfo 
     {
         #region Members
         private string input = String.Empty;        
@@ -41,7 +41,7 @@ namespace PostgreSQL
         /// </summary>
         public RestoreInfo() : base() 
         {
-            UtilityFile = "pg_restore.exe";
+            //UtilityFile = "pg_restore.exe";
         }
 
         /// <summary>
@@ -52,9 +52,9 @@ namespace PostgreSQL
         /// <param name="database">Specifies the name of the database to connect to.</param>
         /// <param name="username">User name to connect as.</param>
         /// <param name="password">User password.</param>
-        public RestoreInfo(string host, int port, string database, string username, string password) : base(host, port, database, username, password) 
+        public RestoreInfo(string host, int port, string database, string username, string password) 
         {
-            UtilityFile = "pg_restore.exe";
+            //UtilityFile = "pg_restore.exe";
         }
         #endregion
 
@@ -93,7 +93,7 @@ namespace PostgreSQL
         #endregion
 
         #region Arguments
-        public override string Arguments()
+        public string Arguments()
         {
             StringBuilder arguments = new StringBuilder();
 
